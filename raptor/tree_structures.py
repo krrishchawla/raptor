@@ -1,16 +1,24 @@
 from typing import Dict, List, Set
 
 
+class Metadata:
+    def __init__(self, year, company, sector) -> None:
+        self.year = year
+        self.company = company
+        self.sector = sector
+    
+
 class Node:
     """
     Represents a node in the hierarchical tree structure.
     """
 
-    def __init__(self, text: str, index: int, children: Set[int], embeddings) -> None:
+    def __init__(self, text: str, index: int, children: Set[int], metadata: Metadata, embeddings) -> None:
         self.text = text
         self.index = index
         self.children = children
         self.embeddings = embeddings
+        self.metadata = metadata
 
 
 class Tree:

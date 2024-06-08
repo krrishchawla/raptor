@@ -1,0 +1,82 @@
+[
+    {
+      "question": "Which company had the highest percentage of net sales spent on research and development costs in a single year between 2015-2018? What was the percentage and year?",
+      "answer": "PPG Industries spent 3.3% of annual net sales on research and development costs in 2016, the highest single year percentage between 2015-2018 among the companies in the dataset."
+    },
+    {
+      "question": "In fiscal years 2016-2018, which company in the Consumer Goods & Retail sector had the most consistent ratio of advertising expense to net sales?",
+      "answer": "General Mills had advertising expense as a percentage of net sales of 5.1% in 2016, 5.1% in 2017, and 5.0% in 2018, showing the most consistent advertising to sales ratio in the Consumer Goods & Retail sector over that 3 year period."
+    },
+    {
+      "question": "For manufacturing companies headquartered in the United States, which company had the largest increase in the number of shares repurchased between 2017 and 2018?",
+      "answer": "Huntington Ingalls Industries repurchased 2,620,987 shares in Q4 2018 alone, a significant increase over the total shares repurchased in all of fiscal year 2017."
+    },
+    {
+      "question": "Across all sectors, which company had the highest total restructuring and related charges between 2009-2011?",
+      "answer": "Huntington Ingalls Industries recorded $210 million in charges related to the wind down of the Avondale shipyard between 2010-2011, the largest restructuring charge in the dataset over that time period."
+    },
+    {
+      "question": "Which CEOs of S&P 500 companies in the dataset had compensation packages that included performance-based restricted stock units tied to 3-year performance periods?",
+      "answer": "The CEOs of Altria and Philip Morris International had performance-based restricted stock unit awards in their compensation tied to 3-year compounded annual adjusted EPS growth rate and total shareholder return metrics."
+    },
+    {
+      "question": "Among real estate companies, which had the longest average remaining lease term for its top tenants as of the most recent annual report?",
+      "answer": "As of December 31, 2011, Vornado Realty Trust's future base rental revenue under non-cancelable operating leases, excluding leases with an original term of less than one year and rents resulting from the exercise of renewal options, was $6.0 billion for leases expiring after 2016, suggesting it had the longest average remaining lease term for its top tenants."
+    },
+    {
+      "question": "Which company in the Energy & Utilities sector had the most comprehensive disclosure of its future unconditional purchase obligations in its 2016 annual report?",
+      "answer": "Air Products and Chemicals provided a detailed breakout of its future unconditional purchase obligations as of September 30, 2016, with $5.3 billion total, including $4.0 billion related to helium purchases under take-or-pay agreements and $330 million related to feedstock supply for numerous HyCO facilities."
+    },
+    {
+      "question": "Across the Healthcare sector, which company had the highest allowance for doubtful accounts as a percentage of gross accounts receivable in 2015?",
+      "answer": "Hologic's allowance for doubtful accounts represented 7.6% of gross accounts receivable as of September 26, 2015, the highest percentage in the Healthcare sector that year based on the data provided."
+    },
+    {
+      "question": "Which company in the Industrials & Manufacturing sector disclosed the most detail about its asbestos-related liabilities in its annual reports between 2016-2018?",
+      "answer": "PPG Industries disclosed $174 million in asbestos settlement liabilities as of December 31, 2018 and provided a rollforward of its asbestos settlement liability for the past 3 years, along with a discussion of recent asbestos-related developments, making it the most comprehensive asbestos liability disclosure among industrials companies between 2016-2018."
+    },
+    {
+      "question": "Among companies in the Financial Services sector, which had the highest net charge-offs related to credit card loans in a single year between 2008-2010? What was the amount?",
+      "answer": "Citigroup recorded $240 million in net credit losses on its North America Citi-branded cards portfolio and $709 million on its North America retail partner cards portfolio in 2009, totaling $949 million, the highest single year credit card net charge-off amount among financial services companies between 2008-2010."
+    },
+    {
+      "question": "Which company had the highest gross margin percentage in fiscal year 2018 among those that report a Consumer Packaging or Consumer Products business segment?",
+      "answer": "Kimberly-Clark's Consumer Tissue segment had a gross margin of 33% in 2018, the highest among companies with a Consumer Packaging or Consumer Products business that year based on the data provided."
+    },
+    {
+      "question": "Among companies in the Real Estate sector, which had the largest number of shares of common stock repurchased in 2018?",
+      "answer": "Mid-America Apartment Communities repurchased 723,737 shares of its common stock at an average price of $91.88 per share during 2018, for a total of $66.5 million. This was the largest share repurchase among Real Estate companies in 2018 based on the data provided."
+    },
+    {
+      "question": "Which company in the Technology & Electronics sector had the highest depreciation expense as a percentage of revenue in fiscal year 2012?",
+      "answer": "Jabil Circuit's depreciation expense was $404 million in fiscal 2012, representing 3.2% of net revenue, the highest percentage among Technology & Electronics companies that year based on the information given."
+    },
+    {
+      "question": "Among S&P 500 companies in the dataset, which had the lowest annual effective tax rate in 2017 and what was the rate?",
+      "answer": "Aptiv PLC had an effective tax rate of -23% for the year ended December 31, 2017, the lowest among S&P 500 companies in the dataset that year."
+    },
+    {
+      "question": "Which company in the Consumer Goods & Retail sector had the highest advertising expense in absolute dollars in fiscal 2015?",
+      "answer": "Procter & Gamble spent $7.2 billion on advertising expense in fiscal 2015, the most in absolute dollars that year among Consumer Goods & Retail companies based on the data provided."
+    },
+    {
+      "question": "Among companies that disclose an aggregated amount for future minimum rental income as of their most recent annual report, which had the highest amount?",
+      "answer": "As of December 31, 2004, American Tower Corporation had future minimum rental receipts expected from customers under non-cancelable operating lease agreements of $3.1 billion, the highest aggregated amount disclosed in the most recent annual reports in the dataset."
+    },
+    {
+      "question": "Which company in the Financial Services sector incurred the highest restructuring charges related to employee severance in 2016?",
+      "answer": "State Street Corporation incurred aggregate restructuring charges of $143 million in 2016 primarily related to severance costs associated with targeted staff reductions, the highest employee severance-related restructuring charges among Financial Services companies that year based on the data provided."
+    },
+    {
+      "question": "Among companies in the Technology sector, which had the highest amount of unrecognized tax benefits as of its most recent fiscal year-end? What was the amount?",
+      "answer": "Apple Inc. had $4.6 billion of gross unrecognized tax benefits as of September 26, 2015, the highest amount among Technology sector companies as of their most recent fiscal year-end based on the data provided."
+    },
+    {
+      "question": "Which company had the highest percentage of its pension plan assets invested in equity securities as of the most recent fiscal year-end?",
+      "answer": "As of December 31, 2018, approximately 55% of Lockheed Martin's qualified defined benefit pension plans were invested in equity securities, the highest percentage among companies that disclosed this information in their most recent annual report."
+    },
+    {
+      "question": "Among companies in the Travel & Leisure sector, which had the highest total operating expenses as a percentage of revenue in 2018?",
+      "answer": "Royal Caribbean Cruises Ltd.'s total cruise operating expenses were 73.3% of total revenues in 2018, the highest operating expense ratio among Travel & Leisure companies that year based on the data provided."
+    }
+  ]

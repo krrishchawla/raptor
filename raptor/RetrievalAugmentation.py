@@ -18,6 +18,7 @@ logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 class RetrievalAugmentationConfig:
     def __init__(
         self,
+        json_data=None,
         tree_builder_config=None,
         tree_retriever_config=None,  # Change from default instantiation
         qa_model=None,
@@ -41,11 +42,12 @@ class RetrievalAugmentationConfig:
         tb_threshold=0.5,
         tb_top_k=5,
         tb_selection_mode="top_k",
-        tb_summarization_length=100,
+        tb_summarization_length=500,
         tb_summarization_model=None,
         tb_embedding_models=None,
         tb_cluster_embedding_model="OpenAI",
     ):
+        self.json_data = json_data
         # Validate tree_builder_type
         if tree_builder_type not in supported_tree_builders:
             raise ValueError(
@@ -92,6 +94,7 @@ class RetrievalAugmentationConfig:
         ]
         if tree_builder_config is None:
             tree_builder_config = tree_builder_config_class(
+                json_data=json_data,
                 tokenizer=tb_tokenizer,
                 max_tokens=tb_max_tokens,
                 num_layers=tb_num_layers,
@@ -201,7 +204,7 @@ class RetrievalAugmentation:
             f"Successfully initialized RetrievalAugmentation with Config {config.log_config()}"
         )
 
-    def add_documents(self, docs):
+    def add_documents_old(self, docs):
         """
         Adds documents to the tree and creates a TreeRetriever instance.
 
@@ -218,6 +221,26 @@ class RetrievalAugmentation:
 
         self.tree = self.tree_builder.build_from_text(text=docs)
         self.retriever = TreeRetriever(self.tree_retriever_config, self.tree)
+
+
+    def add_documents(self, json_data):
+        """
+        Adds documents to the tree and creates a TreeRetriever instance.
+
+        Args:
+            json_data (list): The input JSON data to add to the tree.
+        """
+        if self.tree is not None:
+            user_input = input(
+                "Warning: Overwriting existing tree. Did you mean to call 'add_to_existing' instead? (y/n): "
+            )
+            if user_input.lower() == "y":
+                # self.add_to_existing(json_data)
+                return
+
+        self.tree = self.tree_builder.build_from_json(json_data=json_data)
+        self.retriever = TreeRetriever(self.tree_retriever_config, self.tree)
+
 
     def retrieve(
         self,

@@ -1,0 +1,122 @@
+[
+    {
+        "question": "How did Analog Devices' fair value of forward exchange contracts change from 2008 to 2009?",
+        "answer": "Analog Devices' fair value of forward exchange contracts increased from a liability of $23,158 in 2008 to an asset of $6,427 in 2009."
+    },
+    {
+        "question": "What was the trend in Analog Devices' amortization expense related to intangibles from 2007 to 2009?",
+        "answer": "Analog Devices' amortization expense related to intangibles decreased from $9.2 million in 2007 to $9.3 million in 2008 and further to $7.4 million in 2009."
+    },
+    {
+        "question": "How did Analog Devices manage its interest rate exposure in 2009?",
+        "answer": "In 2009, Analog Devices engaged in interest rate swap transactions, converting $375 million of its 5.0% fixed-rate debt into floating interest rate debt, tied to a three-month LIBOR plus 2.05%. These swaps were designated as fair value hedges."
+    },
+    {
+        "question": "What was the change in Analog Devices' uncertain tax positions balance from 2008 to 2009?",
+        "answer": "Analog Devices' uncertain tax positions balance increased from $13,750 in 2008 to $18,161 in 2009, primarily due to additions for current year tax positions."
+    },
+    {
+        "question": "How did CDW Corporation's diluted weighted-average shares change from 2012 to 2014?",
+        "answer": "CDW Corporation's diluted weighted-average shares increased from 145.8 million in 2012 to 158.7 million in 2013 and further to 172.8 million in 2014, influenced by the company's IPO and underwriters' overallotment exercise in 2013."
+    },
+    {
+        "question": "What was the trend in Apple's future minimum lease payments from 2013 to 2014?",
+        "answer": "Apple's future minimum lease payments increased from 2013 to 2014, with payments of $662 million due in 2015 compared to $610 million in 2014, and total commitments rising from $4.987 billion in 2013 to $5.0 billion in 2014."
+    },
+    {
+        "question": "How did Jack Henry & Associates' stock performance compare to the S&P 500 and its peer group from 2013 to 2018?",
+        "answer": "Jack Henry & Associates' stock significantly outperformed both the S&P 500 and its peer group from 2013 to 2018, with its stock value increasing from 100.00 in 2013 to 296.19 in 2018, compared to the S&P 500's growth from 100.00 to 187.70 and the peer group's growth from 100.00 to 297.44 over the same period."
+    },
+    {
+        "question": "What was the change in Intel's accumulated other comprehensive income (loss) related to actuarial losses from 2015 to 2016?",
+        "answer": "Intel's accumulated other comprehensive income (loss) related to actuarial losses increased from -$1,004 million in 2015 to -$1,240 million in 2016."
+    },
+    {
+        "question": "How did Cadence Design Systems' cumulative 5-year total stockholder return compare to the NASDAQ Composite Index and the S&P 400 Information Technology Index from 2011 to 2016?",
+        "answer": "Cadence Design Systems' cumulative 5-year total stockholder return outperformed both the NASDAQ Composite Index and the S&P 400 Information Technology Index from 2011 to 2016, with Cadence's stock value increasing from 100 in 2011 to 242.50 in 2016, compared to the NASDAQ's growth from 100 to 216.54 and the S&P 400 Information Technology Index's growth from 100 to 219.65 over the same period."
+    },
+    {
+        "question": "What was the change in Jack Henry & Associates' stock performance compared to the S&P 500 and its peer group from 2011 to 2016?",
+        "answer": "Jack Henry & Associates' stock value significantly outperformed both the S&P 500 and its peer group from 2011 to 2016, increasing from 100.00 in 2011 to 312.11 in 2016, compared to the S&P 500's growth from 100.00 to 177.02 and the peer group's growth from 100.00 to 251.24 over the same period."
+    },
+    {
+        "question": "How did Ansys' expected volatility and risk-free interest rates change in its Monte Carlo lattice pricing model from 2014 to 2016?",
+        "answer": "In Ansys' Monte Carlo lattice pricing model, the expected volatility of Ansys stock decreased from 25% in 2014 to 21% in 2016, while the risk-free interest rate remained relatively stable around 1.0%-1.1% over the same period."
+    },
+    {
+        "question": "What was the change in Skyworks Solutions' valuation allowance from 2011 to 2012?",
+        "answer": "Skyworks Solutions' valuation allowance increased from $33.6 million for U.S. state tax credits and $13.4 million for foreign deferred tax assets in 2011 to a total of $47 million in 2012."
+    },
+    {
+        "question": "How did the assumptions in Cadence Design Systems' Black-Scholes model for valuing stock options change from 2007 to 2012?",
+        "answer": "In Cadence Design Systems' Black-Scholes model for valuing stock options, the dividend yield increased from 0.0% in 2007 to 0.0% in 2012, the expected stock price volatility decreased from 45.0% to 45.0%, the risk-free interest rate decreased from 4.93% to 1.2%, and the expected option life remained constant at 5 years over the same period."
+    },
+    {
+        "question": "What was the trend in Eli Lilly's expected rate of return on plan assets for its defined benefit pension and retiree health benefit plans from 2020 to 2023?",
+        "answer": "Eli Lilly's expected rate of return on plan assets for its defined benefit pension and retiree health benefit plans is projected to remain consistent at 7.3% from 2020 through 2023."
+    },
+    {
+        "question": "How did Hologic's fair value of vested share awards change from 2007 to 2008?",
+        "answer": "Hologic's fair value of vested share awards increased from $2.3 million in 2007 to $3.4 million in 2008."
+    },
+    {
+        "question": "What was the change in Vertex Pharmaceuticals' lease commitments for its major lease at Kendall Square from 2006 to 2008?",
+        "answer": "Vertex Pharmaceuticals' lease commitments for its major lease at Kendall Square extended through 2006 with potential extensions up to 2038, indicating a long-term commitment to this facility from 2006 to 2008."
+    },
+    {
+        "question": "How did Hologic's purchase price allocation for intangible assets change from its acquisition of R2 in 2006 to its acquisition of BioLucent in 2008?",
+        "answer": "In Hologic's purchase price allocation for intangible assets, the value allocated to in-process research and development decreased from $4,900 in its acquisition of R2 in 2006 to $0 in its acquisition of BioLucent in 2008, while the value allocated to developed technology and know-how increased from $39,500 to $12,300 and the value allocated to customer relationships decreased from $15,700 to $17,000 over the same period."
+    },
+    {
+        "question": "What was the trend in The Estée Lauder Companies' expected dividend yield and expected option life in its Black-Scholes model for valuing stock options from 2007 to 2009?",
+        "answer": "In The Estée Lauder Companies' Black-Scholes model for valuing stock options, the expected dividend yield decreased from 0.7% in 2007 to 0.9% in 2009, while the expected option life remained constant at 5 years over the same period."
+    },
+    {
+        "question": "How did ConAgra Brands' consumer foods segment's sales volume and gross profit change from 2006 to 2007?",
+        "answer": "ConAgra Brands' consumer foods segment's sales volume decreased by 1% and gross profit fell by 3% from 2006 to 2007, primarily due to weaker performance in certain shelf-stable brands."
+    },
+    {
+        "question": "What was the trend in General Mills' annual amortization expense for intangible assets from 2010 to 2011?",
+        "answer": "General Mills' annual amortization expense for intangible assets is projected to decrease from $5,425 in 2010 to $1,430 in 2011."
+    },
+    {
+        "question": "How did Tractor Supply's owned and leased distribution facilities change from 2017 to 2018?",
+        "answer": "Tractor Supply's owned distribution facilities increased with the addition of the Frankfort, NY facility in 2018, which began receiving merchandise in Q4 2018 with shipments to stores starting in Q1 2019, while the number of leased distribution facilities remained the same from 2017 to 2018."
+    },
+    {
+        "question": "What was the trend in Ralph Lauren's global distribution channels from 2011 to 2012?",
+        "answer": "Ralph Lauren's global distribution channels expanded from 2011 to 2012, with the company operating 379 stores worldwide totaling approximately 2.9 million gross square feet, 474 concessions-based shop-within-shops, and six e-commerce websites in 2012, reflecting a focus on extending its direct-to-consumer reach."
+    },
+    {
+        "question": "How did O'Reilly Automotive's stock performance compare to the S&P 500 Retail Index and the S&P 500 Index from 2010 to 2015?",
+        "answer": "O'Reilly Automotive's stock significantly outperformed both the S&P 500 Retail Index and the S&P 500 Index from 2010 to 2015, with an initial investment of $100 growing to $419 for O'Reilly, compared to $252 for the S&P 500 Retail Index and $163 for the S&P 500 Index over the same period."
+    },
+    {
+        "question": "What was the change in General Mills' fair value impact from commodity instruments from 2014 to 2015?",
+        "answer": "The fair value impact from General Mills' commodity instruments increased from $3.0 million as of May 25, 2014 to $3.7 million as of May 31, 2015."
+    },
+    {
+        "question": "How did Constellation Brands' purchase price allocation for acquired intangible assets change from its acquisition of Robert Mondavi in 2005 to its acquisition of Vincor International in 2006?",
+        "answer": "In Constellation Brands' purchase price allocation for acquired intangible assets, the value allocated to trademarks increased from $186 million in its acquisition of Robert Mondavi in 2005 to $272.3 million in its acquisition of Vincor International in 2006."
+    },
+    {
+        "question": "What was the trend in Under Armour's future minimum lease payments from 2011 to 2016?",
+        "answer": "Under Armour's future minimum lease payments increased from $185.18 million in 2011 to $218.74 million in 2016, with significant payments of $22.926 million due in 2012, $23.47 million in 2013, $26.041 million in 2014, $24.963 million in 2015, and $18.734 million in 2016, reflecting the company's expanding corporate and retail footprint."
+    },
+    {
+        "question": "How did General Mills' share repurchase activity change from 2005 to 2006?",
+        "answer": "General Mills' share repurchase activity increased slightly from 2005 to 2006, with the company repurchasing 19 million shares for $892 million in 2006 compared to 17 million shares for $771 million in 2005."
+    },
+    {
+        "question": "What was the change in Advance Auto Parts' allowance for doubtful accounts from 2015 to 2016?",
+        "answer": "Advance Auto Parts' allowance for doubtful accounts increased from $16,152 at the beginning of 2015 to $29,164 by the end of 2016, with charges to expenses of $22,067 and deductions of $12,461 in 2015, and charges of $24,597 and deductions of $21,191 in 2016."
+    },
+    {
+        "question": "How did O'Reilly Automotive's unrealized losses on derivatives designated as cash flow hedges change from 2008 to 2009?",
+        "answer": "O'Reilly Automotive's unrealized losses on derivatives designated as cash flow hedges decreased from $18,874 in 2008 to $13,053 in 2009, indicating an improvement in the company's management of its interest rate swaps."
+    },
+    {
+        "question": "What was the trend in The Estée Lauder Companies' Value-at-Risk (VaR) for foreign exchange contracts and interest rate contracts from 2008 to 2009?",
+        "answer": "The Estée Lauder Companies' Value-at-Risk (VaR) for foreign exchange contracts ranged from $14.2 million to $28.4 million with an average of $21.6 million in 2009, while the VaR for interest rate contracts ranged from $23.0 million to $34.3 million with an average of $29.5 million in 2009, reflecting increased volatilities compared to 2008."
+    }
+]

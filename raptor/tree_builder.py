@@ -13,7 +13,7 @@ from tenacity import retry, stop_after_attempt, wait_random_exponential
 from .EmbeddingModels import BaseEmbeddingModel, OpenAIEmbeddingModel
 from .SummarizationModels import (BaseSummarizationModel,
                                   GPT3TurboSummarizationModel)
-from .tree_structures import Node, Tree
+from .tree_structures import Node, Tree, Metadata
 from .utils import (distances_from_embeddings, get_children, get_embeddings,
                     get_node_list, get_text,
                     indices_of_nearest_neighbors_from_distances, split_text)
@@ -24,6 +24,7 @@ logging.basicConfig(format="%(asctime)s - %(message)s", level=logging.INFO)
 class TreeBuilderConfig:
     def __init__(
         self,
+        json_data,
         tokenizer=None,
         max_tokens=None,
         num_layers=None,
@@ -35,12 +36,14 @@ class TreeBuilderConfig:
         embedding_models=None,
         cluster_embedding_model=None,
     ):
+        self.json_data = json_data
+            
         if tokenizer is None:
             tokenizer = tiktoken.get_encoding("cl100k_base")
         self.tokenizer = tokenizer
 
         if max_tokens is None:
-            max_tokens = 100
+            max_tokens = 500
         if not isinstance(max_tokens, int) or max_tokens < 1:
             raise ValueError("max_tokens must be an integer and at least 1")
         self.max_tokens = max_tokens
@@ -70,7 +73,7 @@ class TreeBuilderConfig:
         self.selection_mode = selection_mode
 
         if summarization_length is None:
-            summarization_length = 100
+            summarization_length = 500
         self.summarization_length = summarization_length
 
         if summarization_model is None:
@@ -155,7 +158,7 @@ class TreeBuilder:
             f"Successfully initialized TreeBuilder with Config {config.log_config()}"
         )
 
-    def create_node(
+    def create_node_old(
         self, index: int, text: str, children_indices: Optional[Set[int]] = None
     ) -> Tuple[int, Node]:
         """Creates a new node with the given index, text, and (optionally) children indices.
@@ -177,6 +180,18 @@ class TreeBuilder:
             for model_name, model in self.embedding_models.items()
         }
         return (index, Node(text, index, children_indices, embeddings))
+    
+    def create_node(
+        self, index: int, text: str, children_indices: Optional[Set[int]] = None, metadata: Metadata = None
+    ) -> Tuple[int, Node]:
+        if children_indices is None:
+            children_indices = set()
+
+        embeddings = {
+            model_name: model.create_embedding(text)
+            for model_name, model in self.embedding_models.items()
+        }
+        return (index, Node(text, index, children_indices, metadata, embeddings))
 
     def create_embedding(self, text) -> List[float]:
         """
@@ -203,6 +218,7 @@ class TreeBuilder:
         Returns:
             str: The generated summary.
         """
+        # return "This is a summary of the node"
         return self.summarization_model.summarize(context, max_tokens)
 
     def get_relevant_nodes(self, current_node, list_nodes) -> List[Node]:
@@ -256,6 +272,34 @@ class TreeBuilder:
                 leaf_nodes[index] = node
 
         return leaf_nodes
+    
+
+    def multithreaded_create_leaf_nodes_from_json(self, json_data: List[Dict]) -> Dict[int, Node]:
+        """Creates leaf nodes using multithreading from the given list of JSON objects.
+
+        Args:
+            json_data (List[Dict]): A list of JSON objects representing the documents.
+
+        Returns:
+            Dict[int, Node]: A dictionary mapping node indices to the corresponding leaf nodes.
+        """
+        with ThreadPoolExecutor() as executor:
+            future_nodes = {
+                executor.submit(
+                    self.create_node,
+                    index,
+                    document["summary"],
+                    metadata=Metadata(document["year"], document["company"], document["sector"]),
+                ): (index, document)
+                for index, document in enumerate(json_data)
+            }
+
+            leaf_nodes = {}
+            for future in as_completed(future_nodes):
+                index, node = future.result()
+                leaf_nodes[index] = node
+
+        return leaf_nodes
 
     def build_from_text(self, text: str, use_multithreading: bool = True) -> Tree:
         """Builds a golden tree from the input text, optionally using multithreading.
@@ -289,6 +333,45 @@ class TreeBuilder:
         all_nodes = copy.deepcopy(leaf_nodes)
 
         root_nodes = self.construct_tree(all_nodes, all_nodes, layer_to_nodes)
+
+        tree = Tree(all_nodes, root_nodes, leaf_nodes, self.num_layers, layer_to_nodes)
+
+        return tree
+    
+    def build_from_json(self, json_data: List[Dict], use_multithreading: bool = True) -> Tree:
+        """Builds a golden tree from the input JSON data, optionally using multithreading.
+
+        Args:
+            json_data (List[Dict]): The input JSON data.
+            use_multithreading (bool, optional): Whether to use multithreading when creating leaf nodes.
+                Default: True.
+
+        Returns:
+            Tree: The golden tree structure.
+        """
+        logging.info("Creating Leaf Nodes")
+
+        if use_multithreading:
+            leaf_nodes = self.multithreaded_create_leaf_nodes_from_json(json_data)
+        else:
+            leaf_nodes = {}
+            for index, document in enumerate(json_data):
+                metadata = Metadata(document["year"], document["company"], document["sector"])
+                __, node = self.create_node(index, document["summary"], metadata=metadata)
+                leaf_nodes[index] = node
+
+        layer_to_nodes = {0: list(leaf_nodes.values())}
+
+        logging.info(f"Created {len(leaf_nodes)} Leaf Nodes")
+
+        logging.info("Building All Nodes")
+
+        all_nodes = copy.deepcopy(leaf_nodes)
+
+
+        root_nodes = self.construct_tree(all_nodes, all_nodes, layer_to_nodes)
+
+       
 
         tree = Tree(all_nodes, root_nodes, leaf_nodes, self.num_layers, layer_to_nodes)
 

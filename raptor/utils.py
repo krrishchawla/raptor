@@ -142,6 +142,10 @@ def get_node_list(node_dict: Dict[int, Node]) -> List[Node]:
     return node_list
 
 
+# def get_node_list(nodes: Dict[int, Node]) -> List[Node]:
+#     return list(nodes.values())
+
+
 def get_embeddings(node_list: List[Node], embedding_model: str) -> List:
     """
     Extracts the embeddings of nodes from a list of nodes.

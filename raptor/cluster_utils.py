@@ -133,7 +133,7 @@ class RAPTOR_Clustering(ClusteringAlgorithm):
     def perform_clustering(
         nodes: List[Node],
         embedding_model_name: str,
-        max_length_in_cluster: int = 3500,
+        max_length_in_cluster: int = 30500,
         tokenizer=tiktoken.get_encoding("cl100k_base"),
         reduction_dimension: int = 10,
         threshold: float = 0.1,
